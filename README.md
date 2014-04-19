@@ -17,3 +17,33 @@ SENIOR DEVELOPER / DEVOPS / WEB ARCHITECT
 * HTML5, JavaScript, jQuery, AJAX, Angular.js, HTML, CSS and CSS frameworks
 * Linux, Mac OS X, Nginx, Apache, Git, TDD/BDD
 * Amazon Web Services, Rackspace Cloud
+
+### LANGUAGES
+
+English, French, Spanish, Russian (advanced level)
+
+### EDUCATION
+
+Master degree (Hons)
+
+July 2002, Moscow Power Engineering University / Russia
+
+Major: Applied Mathematics and Informatics
+
+Bachelor degree (Hons)
+
+July 2000, Moscow Power Engineering University / Russia
+
+Major: Applied Mathematics and Informatics
+
+### LINKS
+
+Web: http://ruslanbredikhin.com/
+
+LinkedIn: http://ca.linkedin.com/in/ruslanbredikhin/en
+
+Github: https://github.com/bredikhin
+
+Twitter: https://twitter.com/ruslanbredikhin
+
+StackOverflow: http://stackoverflow.com/users/1330470/bredikhin
