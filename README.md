@@ -40,7 +40,7 @@ Major: Applied Mathematics and Informatics
 
 ### LINKS
 
-Web: http://ruslanbredikhin.com/
+Web: http://www.ruslanbredikhin.com/
 
 LinkedIn: http://ca.linkedin.com/in/ruslanbredikhin/en
 
