@@ -9,7 +9,6 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-@import url(http://fonts.googleapis.com/css?family=Signika);
 
 html {
     color: #222;
@@ -19,7 +18,6 @@ html {
 
 body {
     margin: 32px;
-    font-family: 'Signika', 'sans-serif';
 }
 
 /*
@@ -98,6 +96,7 @@ textarea {
    ========================================================================== */
 p {
   text-align: justify;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 a {
