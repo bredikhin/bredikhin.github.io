@@ -17,7 +17,6 @@ html {
 }
 
 body {
-    margin: 32px;
 }
 
 /*
@@ -94,6 +93,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+#main section {
+  padding-top: 48px;
+}
+
 p {
   text-align: justify;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
