@@ -22,3 +22,8 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+      anchors: ['title', 'summary', 'technologies', 'languages', 'education', 'links']
+    });
+});

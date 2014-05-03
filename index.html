@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="css/vendor/normalize.css">
     <link rel="stylesheet" href="css/vendor/foundation.min.css" />
+    <link rel="stylesheet" href="css/vendor/jquery.fullPage.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script src="js/vendor/modernizr.js"></script>
@@ -17,11 +18,11 @@
     <!--[if lt IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="contain-to-grid sticky">    
+    <div class="contain-to-grid fixed">    
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1><a href="/">Ruslan Bredikhin</a></h1>
+            <h1><a href="#title">Ruslan Bredikhin</a></h1>
           </li>
         </ul>
 
@@ -41,7 +42,7 @@
     <div id="main" class="row">
       <div class="large-12 columns">        
         <div id="fullpage" class="panel">
-          <div class="section active" id="title">
+          <div class="section" did="title">
             <h2>
               RUSLAN BREDIKHIN
             </h2>
@@ -49,7 +50,7 @@
               SENIOR DEVELOPER / DEVOPS / WEB ARCHITECT
             </h1>
           </div>
-          <div class="section" id="summary">
+          <div class="section" did="summary">
             <h3>
               SUMMARY
             </h3>
@@ -63,7 +64,7 @@
               <i>Finally, though I started mainly as programmer (with a slight flavour of management) and I still code a lot, I have to acknowledge the fact that my interests shifted a lot into DevOps and architecting during the recent years (probably, as cloud computing matured). Solving big problems with less resources is something that really attracts me. And something I got really good at.</i>
             </p>
           </div>
-          <div class="section" id="technologies">
+          <div class="section" did="technologies">
             <h3>
               TECHNOLOGIES
             </h3>
@@ -85,7 +86,7 @@
               </li>
             </ul>
           </div>
-          <div class="section" id="languages">
+          <div class="section" did="languages">
             <h3>
               LANGUAGES
             </h3>
@@ -93,7 +94,7 @@
               English, French, Spanish, Russian (advanced level)
             </p>
           </div>
-          <div class="section" id="education">
+          <div class="section" did="education">
             <h3>
               EDUCATION
             </h3>
@@ -116,7 +117,7 @@
               Major: Applied Mathematics and Informatics
             </p>
           </div>
-          <div class="section" id="links">
+          <div class="section" did="links">
             <h3>
               LINKS
             </h3>
@@ -141,13 +142,13 @@
       </div>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
     <script src="js/vendor/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
-    <script src="js/vendors/jquery.easings.min.js"></script>
+    <script src="js/vendor/jquery.easings.min.js"></script>
     <script src="js/vendor/jquery.fullPage.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
