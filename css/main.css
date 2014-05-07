@@ -9,6 +9,8 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
     color: #222;
@@ -93,6 +95,21 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Old Standard TT', serif;
+  font-weight: 700;
+}
+
+section.top-bar-section a {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
 #main .section {
   padding-top: 48px;
 }
