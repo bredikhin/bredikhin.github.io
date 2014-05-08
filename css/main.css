@@ -124,6 +124,27 @@ a {
   text-decoration: none;
 }
 
+body:before {
+  z-index:-1;
+  -webkit-filter:blur(4px);
+  width: 120%;
+  height: 120%;
+  background: url("../img/b.jpg") no-repeat center center;
+  position: fixed;
+  top:-10%;
+  right:0;
+  left:-10%;
+  bottom:0;
+  content: '';
+  display: block;
+  background-size: cover;
+}
+
+#panel {
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
 
 
 
