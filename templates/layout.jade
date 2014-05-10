@@ -1,36 +1,129 @@
 doctype html
-block vars
-  - var bodyclass = null;
-html(lang='en')
-  head
-    block head
-      meta(charset='utf-8')
-      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-      meta(name='viewport', content='width=device-width')
-      title
-        block title
-          = locals.name
-      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-      link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Anonymous+Pro:400,700,400italic,700italic|Merriweather:400,700,300')
-      link(rel='stylesheet', href='/css/main.css')
-  body(class=bodyclass)
-    header.header
-      div.content-wrap
-        block header
-          div.logo
+html.no-js
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Ruslan Bredikhin : Senior Developer / DevOps / Web Architect
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/vendor/normalize.css')
+    link(rel='stylesheet', href='css/vendor/foundation.min.css')
+    link(rel='stylesheet', href='css/main.css')
+    link(href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', rel='stylesheet')
+    script(src='js/vendor/modernizr.js')
+  body
+    //if lt IE 8
+      p.browsehappy
+        | You are using an
+        strong outdated
+        | browser. Please
+        a(href='http://browsehappy.com/') upgrade your browser
+        | to improve your experience.
+    .contain-to-grid.sticky
+      nav.top-bar(data-topbar='data-topbar')
+        ul.title-area
+          li.name
             h1
-              a(href=locals.url)= locals.name
-            p.description= locals.description
-    div#content
-      div.content-wrap
-        block content
-          h2 Welcome to zombocom!
-    footer
-      div.content-wrap
-        block footer
-          section.about
-            !=contents['about.md'].html
-          section.copy
-            p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
-              //- please leave the "powered by" if you use the design
+              a(href='/') RUSLAN BREDIKHIN
+        section.top-bar-section
+          //
+             Right Nav Section
+          ul.right
+            li
+              a(href='#summary') Summary
+            li
+              a(href='#technologies') Technologies
+            li
+              a(href='#languages') Languages
+            li
+              a(href='#education') Education
+            li
+              a(href='#links') Links
+    #main.row
+      .large-12.columns
+        #panel
+          #title.section
+            h2
+              | RUSLAN BREDIKHIN
+            h1
+              | SENIOR DEVELOPER / DEVOPS / WEB ARCHITECT
+          #summary.section
+            h3
+              | SUMMARY
+            p
+              | Senior developer, DevOps and Web architect with over 14 years of experience and high level of expertise in all aspects of Web-production including development, testing, deployment and maintenance.
+            p
+              i
+                | While holding a degree in informatics and mathematics, I admit that most of my knowledge comes from the real life experience. Since 1999, when we started a small Web design company with a couple of friends, I have worked with a lot of software stacks and Web technologies, from with LAMP (Linux, MySQL, Apache, PHP) to Ruby on Rails and MEAN (MongoDB, Express.js, Angular.js, Node.js). One of the main things I believe in is that keeping up-to-date with the latest trends is the only way to stay on top in such rapidly changing industry as IT.
+            p
+              i
+                | Finally, though I started mainly as programmer (with a slight flavour of management) and I still code a lot, I have to acknowledge the fact that my interests shifted a lot into DevOps and architecting during the recent years (probably, as cloud computing matured). Solving big problems with less resources is something that really attracts me. And something I got really good at.
+          #technologies.section
+            h3
+              | TECHNOLOGIES
+            ul
+              li
+                | Node.js, Express.js, Meteor.js, Ruby, Ruby on Rails, PHP, PHP frameworks
+              li
+                | MongoDB, Redis, MySQL, Memcached
+              li
+                | HTML5, JavaScript, jQuery, AJAX, Angular.js, HTML, CSS and CSS frameworks
+              li
+                | Linux, Mac OS X, Nginx, Apache, Git, TDD/BDD
+              li
+                | Amazon Web Services, Rackspace Cloud, Chef, Puppet, Docker
+          #languages.section
+            h3
+              | LANGUAGES
+            p
+              | English, French, Spanish, Russian (advanced level)
+          #education.section
+            h3
+              | EDUCATION
+            h4
+              | Master degree (Hons)
+            p
+              | July 2002, Moscow Power Engineering University / Russia
+            p
+              | Major: Applied Mathematics and Informatics
+            h4
+              | Bachelor degree (Hons)
+            p
+              | July 2000, Moscow Power Engineering University / Russia
+            p
+              | Major: Applied Mathematics and Informatics
+          #links.section
+            h3
+              | LINKS
+            p
+              i.fa.fa-home
+              a(href='http://www.ruslanbredikhin.com/') http://www.ruslanbredikhin.com/
+            p
+              i.fa.fa-linkedin
+              a(href='http://ca.linkedin.com/in/ruslanbredikhin/', target='_blank') http://ca.linkedin.com/in/ruslanbredikhin/en
+            p
+              i.fa.fa-github
+              a(href='https://github.com/bredikhin', target='_blank') https://github.com/bredikhin
+            p
+              i.fa.fa-twitter
+              a(href='https://twitter.com/ruslanbredikhin') https://twitter.com/ruslanbredikhin
+            p
+              i.fa.fa-stack-overflow
+              a(href='http://stackoverflow.com/users/1330470/bredikhin') http://stackoverflow.com/users/1330470/bredikhin
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script
+      window.jQuery || document.write('<script src="js/vendor/jquery.js"><\\/script>')
+    script(src='js/vendor/foundation.min.js')
+    script.
+      $(document).foundation();
+    script(src='js/plugins.js')
+    script(src='js/main.js')
+    //
+       Google Analytics.
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-16899664-10', 'ruslanbredikhin.com');
+      ga('send', 'pageview');
