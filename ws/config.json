@@ -23,5 +23,5 @@
   "paginator": {
     "perPage": 3
   },
-  "output": "../blog"
+  "output": "../"
 }
