@@ -21,7 +21,6 @@
     "smartypants": true
   },
   "paginator": {
-    "perPage": 3
-  },
-  "output": "../"
+    "perPage": 10
+  }
 }
