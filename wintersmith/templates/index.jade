@@ -1,25 +1,71 @@
 extends layout
 
 block content
-  include author
-  each article in articles
-    article.article.intro
-      header
-        p.date
-          span= moment.utc(article.date).format('DD. MMMM YYYY')
-        h2
-          a(href=article.url)= article.title
-      section.content
-        | !{ typogr(article.intro).typogrify() }
-        if article.hasMore
-          p.more
-            a(href=article.url) more
-
-block prepend footer
-  div.nav
-    if prevPage
-      a(href=prevPage.url) « Newer
-    else
-      a(href='/archive.html') « Archives
-    if nextPage
-      a(href=nextPage.url) Next page »
+  #title.section
+    h2
+      | RUSLAN BREDIKHIN
+    h1
+      | SENIOR DEVELOPER / DEVOPS / WEB ARCHITECT
+  #summary.section
+    h3
+      | SUMMARY
+    p
+      | Senior developer, DevOps and Web architect with over 14 years of experience and high level of expertise in all aspects of Web-production including development, testing, deployment and maintenance.
+    p
+      i
+        | While holding a degree in informatics and mathematics, I admit that most of my knowledge comes from the real life experience. Since 1999, when we started a small Web design company with a couple of friends, I have worked with a lot of software stacks and Web technologies, from with LAMP (Linux, MySQL, Apache, PHP) to Ruby on Rails and MEAN (MongoDB, Express.js, Angular.js, Node.js). One of the main things I believe in is that keeping up-to-date with the latest trends is the only way to stay on top in such rapidly changing industry as IT.
+    p
+      i
+        | Finally, though I started mainly as programmer (with a slight flavour of management) and I still code a lot, I have to acknowledge the fact that my interests shifted a lot into DevOps and architecting during the recent years (probably, as cloud computing matured). Solving big problems with less resources is something that really attracts me. And something I got really good at.
+  #technologies.section
+    h3
+      | TECHNOLOGIES
+    ul
+      li
+        | Node.js, Express.js, Meteor.js, Ruby, Ruby on Rails, PHP, PHP frameworks
+      li
+        | MongoDB, Redis, MySQL, Memcached
+      li
+        | HTML5, JavaScript, jQuery, AJAX, Angular.js, HTML, CSS and CSS frameworks
+      li
+        | Linux, Mac OS X, Nginx, Apache, Git, TDD/BDD
+      li
+        | Amazon Web Services, Rackspace Cloud, Chef, Puppet, Docker
+  #languages.section
+    h3
+      | LANGUAGES
+    p
+      | English, French, Spanish, Russian (advanced level)
+  #education.section
+    h3
+      | EDUCATION
+    h4
+      | Master degree (Hons)
+    p
+      | July 2002, Moscow Power Engineering University / Russia
+    p
+      | Major: Applied Mathematics and Informatics
+    h4
+      | Bachelor degree (Hons)
+    p
+      | July 2000, Moscow Power Engineering University / Russia
+    p
+      | Major: Applied Mathematics and Informatics
+  #links.section
+    h3
+      | LINKS
+    p
+      i.fa.fa-home
+      a(href='http://www.ruslanbredikhin.com/') http://www.ruslanbredikhin.com/
+    p
+      i.fa.fa-linkedin
+      a(href='http://ca.linkedin.com/in/ruslanbredikhin/', target='_blank') http://ca.linkedin.com/in/ruslanbredikhin/en
+    p
+      i.fa.fa-github
+      a(href='https://github.com/bredikhin', target='_blank') https://github.com/bredikhin
+    p
+      i.fa.fa-twitter
+      a(href='https://twitter.com/ruslanbredikhin') https://twitter.com/ruslanbredikhin
+    p
+      i.fa.fa-stack-overflow
+      a(href='http://stackoverflow.com/users/1330470/bredikhin') http://stackoverflow.com/users/1330470/bredikhin
