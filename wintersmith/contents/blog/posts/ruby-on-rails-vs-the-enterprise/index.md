@@ -10,7 +10,7 @@ seven years ago. As usually, pretty strong language.
 ---
 
 Ruby on Rails vs the Enterprise
-============================
+===============================
 
 One of his comments (regarding the future of Ruby on Rails),
 for example, was:
