@@ -4,5 +4,8 @@
     "underscore": "1.4.x",
     "typogr": "0.5.x"
   },
-  "repository": "none"
+  "repository": "none",
+  "scripts": {
+    "build": "wintersmith build && cd ../ && git checkout master && rm -rf css/ img/ js/ blog/ && mv -f wintersmith/build/* ./"
+  }
 }
