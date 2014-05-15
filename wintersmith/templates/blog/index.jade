@@ -5,12 +5,13 @@ block content
   each post in posts
     post.post.intro
       header
-        p.date
-          span= moment.utc(post.date).format('DD. MMMM YYYY')
+        h3.date
+          span= moment.utc(post.date).format('YYYY-MM-DD')
         h2
           a(href=post.url)= post.title
       section.content
         | !{ typogr(post.intro).typogrify() }
         if post.hasMore
-          p.more
-            a(href=post.url) more
+          p.more.right
+            a(href=post.url) Read more &raquo;
+    hr
