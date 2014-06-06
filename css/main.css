@@ -146,7 +146,9 @@ body:before {
   background: rgba(255, 255, 255, 0.75);
 }
 
-
+#photo {
+  margin-left: 16px;
+}
 
 
 
