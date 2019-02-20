@@ -127,8 +127,8 @@ a {
 body:before {
   z-index: -1;
   -webkit-filter: blur(3px);
-  width: 104%;
-  height: 104%;
+  width: 120%;
+  height: 120%;
   background: url("../img/b.jpg") no-repeat center center;
   opacity: 0.75;
   position: fixed;
