@@ -47,7 +47,7 @@
 );
 
 $size-header-width: 35%;
-$size-header-pad: 4em;
+$size-header-pad: 2em;
 
 /* Basic */
 
@@ -737,6 +737,30 @@ ul {
         top: 0;
         width: 1em;
       }
+    }
+  }
+
+  &.clients {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    li {
+      padding: 2em 2em 2em 2em;
+
+      a {
+        border: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    img.logo {
+      height: 2em;
     }
   }
 }
