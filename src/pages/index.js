@@ -4,13 +4,13 @@ import Helmet from 'react-helmet'
 import Client from '../components/Client'
 import Layout from '../components/layout'
 
-import logo1 from '../assets/images/client1.png'
-import logo2 from '../assets/images/client2.png'
-import logo3 from '../assets/images/client3.png'
-import logo4 from '../assets/images/client4.png'
-import logo5 from '../assets/images/client5.png'
-import logo6 from '../assets/images/client6.png'
-import logo7 from '../assets/images/client7.png'
+import logo1 from '../assets/images/client1.svg'
+import logo2 from '../assets/images/client2.svg'
+import logo3 from '../assets/images/client3.svg'
+import logo4 from '../assets/images/client4.svg'
+import logo5 from '../assets/images/client5.svg'
+import logo6 from '../assets/images/client6.svg'
+import logo7 from '../assets/images/client7.svg'
 
 const clients = [
   {
@@ -92,7 +92,7 @@ const HomeIndex = () => (
         </li>
         <li>PostgreSQL, MongoDB, Redis</li>
         <li>React.js, Redux, GraphQL, TypeScript, CSS</li>
-        <li>Git, Docker, Kubernetes, Linux shell, Vim, AWS</li>
+        <li>Git, Docker, Kubernetes, AWS, Linux shell, Vim</li>
       </section>
       <section id="three">
         <header className="major">
