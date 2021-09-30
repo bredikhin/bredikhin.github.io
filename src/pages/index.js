@@ -91,7 +91,7 @@ const HomeIndex = () => (
           Node.js, Ruby & Ruby on Rails, Elixir, Erlang, Golang, Python, PHP
         </li>
         <li>PostgreSQL, MongoDB, Redis</li>
-        <li>React.js, Redux, GraphQL, TypeScript, CSS</li>
+        <li>React.js, React Native, TypeScript, Redux, GraphQL, CSS</li>
         <li>Git, Docker, Kubernetes, AWS, Linux shell, Vim</li>
       </section>
       <section id="three">
@@ -99,7 +99,7 @@ const HomeIndex = () => (
           <h2>Projects and Clients</h2>
         </header>
         <ul className="clients">
-          {clients.map(client => (
+          {clients.map((client) => (
             <li key={client.name}>
               <Client {...client} />
             </li>
@@ -110,7 +110,7 @@ const HomeIndex = () => (
         <header className="major">
           <h2>Languages</h2>
         </header>
-        <p>English, French, Spanish, Portuguese, Russian</p>
+        <p>English, French, Spanish, Portuguese, Italian, Russian</p>
       </section>
       <section id="five">
         <header className="major">
