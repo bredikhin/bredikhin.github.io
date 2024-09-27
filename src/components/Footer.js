@@ -28,7 +28,7 @@ class Footer extends React.Component {
             </li>
             <li>
               <a
-                href="https://twitter.com/ruslanbredikhin"
+                href="https://x.com/russbredihin"
                 className="icon fa-twitter"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -38,7 +38,7 @@ class Footer extends React.Component {
             </li>
             <li>
               <a
-                href="https://medium.com/@ruslanbredikhin"
+                href="https://medium.com/@russbredihin"
                 className="icon fa-medium"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -58,7 +58,7 @@ class Footer extends React.Component {
             </li>
           </ul>
           <ul className="copyright">
-            <li>&copy; 2021 Ruslan Bredikhin</li>
+            <li>&copy; 2024 Ruslan Bredikhin</li>
           </ul>
         </div>
       </div>
