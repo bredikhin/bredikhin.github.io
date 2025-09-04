@@ -8,5 +8,17 @@ export default defineConfig({
   output: 'static',
   site: 'https://bredikhin.github.io',
   base: '/',
-  integrations: [react()]
+  integrations: [react()],
+  vite: {
+    server: {
+      port: 4322,
+      fs: {
+        allow: ['..']
+      }
+    }
+  },
+  // GitHub Pages deployment settings
+  build: {
+    assets: '_astro'
+  }
 });

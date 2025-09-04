@@ -2,48 +2,40 @@
 import Layout from '../components/Layout.astro';
 import Client from '../components/Client.astro';
 
-import logo1 from '../assets/images/client1.svg';
-import logo2 from '../assets/images/client2.svg';
-import logo3 from '../assets/images/client3.svg';
-import logo4 from '../assets/images/client4.svg';
-import logo5 from '../assets/images/client5.svg';
-import logo6 from '../assets/images/client6.svg';
-import logo7 from '../assets/images/client7.svg';
-
 const clients = [
   {
     name: 'Lookbooks',
-    img: logo1,
+    img: 'client1.svg',
     url: 'https://www.lookbooks.com/',
   },
   {
     name: 'Ssense',
-    img: logo2,
+    img: 'client2.svg',
     url: 'https://www.ssense.com/',
   },
   {
     name: 'Waggl',
-    img: logo3,
+    img: 'client3.svg',
     url: 'https://www.waggl.com/',
   },
   {
     name: 'Clevertech',
-    img: logo4,
+    img: 'client4.svg',
     url: 'https://www.clevertech.biz/',
   },
   {
     name: 'Automotive Data Solutions',
-    img: logo5,
+    img: 'client5.svg',
     url: 'https://www.adsdata.ca/',
   },
   {
     name: 'Spiria',
-    img: logo6,
+    img: 'client6.svg',
     url: 'https://www.spiria.com/',
   },
   {
     name: 'Estalio',
-    img: logo7,
+    img: 'client7.svg',
     url: 'http://www.estalio.com/',
   },
 ];
@@ -52,7 +44,7 @@ const clients = [
 <Layout title="Ruslan Bredikhin" description="Senior software developer from Montreal, Canada">
   <div id="main">
     <section id="one">
-      <header className="major">
+      <header class="major">
         <h2>Summary</h2>
       </header>
       <p>
@@ -74,7 +66,7 @@ const clients = [
       </p>
     </section>
     <section id="two">
-      <header className="major">
+      <header class="major">
         <h2>Technologies</h2>
       </header>
       <li>
@@ -85,25 +77,25 @@ const clients = [
       <li>Git, Docker, Kubernetes, AWS, Linux shell, Vim</li>
     </section>
     <section id="three">
-      <header className="major">
+      <header class="major">
         <h2>Projects and Clients</h2>
       </header>
-      <ul className="clients">
+      <ul class="clients">
         {clients.map((client) => (
-          <li>
+          <li key={client.name}>
             <Client {...client} />
           </li>
         ))}
       </ul>
     </section>
     <section id="four">
-      <header className="major">
+      <header class="major">
         <h2>Languages</h2>
       </header>
       <p>English, French, Spanish, Portuguese, Italian, Russian</p>
     </section>
     <section id="five">
-      <header className="major">
+      <header class="major">
         <h2>Education</h2>
       </header>
       <h3>Master degree (Hons)</h3>

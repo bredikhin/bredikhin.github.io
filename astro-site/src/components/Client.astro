@@ -9,5 +9,5 @@ const { name, img, url } = Astro.props;
 ---
 
 <a href={url} target="_blank" rel="noreferrer noopener nofollow">
-  <img src={img} alt={name} className="logo" />
+  <img src={`/images/${img}`} alt={name} class="logo" />
 </a>

@@ -1,3 +1,4 @@
+
 {
   "name": "astro-site",
   "type": "module",
@@ -7,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "astro build && gh-pages -d dist -b master"
+    "deploy": "astro build && gh-pages -d dist -b master",
+    "deploy:manual": "npm run build && gh-pages -d dist -b master"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
