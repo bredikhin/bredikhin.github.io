@@ -1,50 +1,26 @@
+
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Hunter Chang",
-  "dependencies": {
-    "gatsby": "^2.2.9",
-    "gatsby-plugin-manifest": "^2.0.24",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.10",
-    "gatsby-plugin-sass": "^2.0.11",
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
-    "node-sass": "^4.11.0",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "react-helmet": "^5.2.0",
-    "react-images": "^0.5.19"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "name": "astro-site",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "astro build && gh-pages -d dist -b master",
+    "deploy:manual": "npm run build && gh-pages -d dist -b master"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "astro": "^5.13.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "sass": "^1.92.0"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "prettier": "^1.17.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "gh-pages": "^6.3.0"
   }
 }
