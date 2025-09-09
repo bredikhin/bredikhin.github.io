@@ -6,8 +6,10 @@ export interface Props {
 }
 
 const { name, img, url } = Astro.props;
+
+const imagePath = `/images/${img}`;
 ---
 
-<a href={url} target="_blank" rel="noreferrer noopener nofollow">
-  <img src={`/images/${img}`} alt={name} class="logo" />
+<a href={url} target="_blank" rel="noreferrer noopener nofollow" class="client-logo-link" title={name}>
+  <img src={imagePath} alt={`${name} Logo`} />
 </a>

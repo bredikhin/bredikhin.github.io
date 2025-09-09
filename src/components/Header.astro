@@ -1,17 +1,28 @@
 ---
-import Footer from './Footer.astro';
 ---
 
-<header id="header">
-  <div class="inner">
-    <div class="image avatar">
-      <img src="/images/avatar.jpg" alt="" />
+<header class="modern-header">
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="avatar-container">
+        <img src="/images/avatar.jpg" alt="Ruslan Bredikhin" class="nav-avatar" />
+      </div>
+      <div class="nav-title">
+        <h1>Ruslan Bredikhin</h1>
+        <span class="nav-subtitle">Senior Software Engineer</span>
+      </div>
     </div>
-    <h1>
-      <strong>Ruslan Bredikhin</strong> <br />
-      SENIOR SOFTWARE ENGINEER <br />
-      <i>Montreal, Canada</i>
-    </h1>
-  </div>
-  <Footer />
+    <div class="nav-menu">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#technologies" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#languages" class="nav-link">Languages</a>
+      <a href="#education" class="nav-link">Education</a>
+    </div>
+    <div class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
 </header>
