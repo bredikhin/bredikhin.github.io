@@ -210,6 +210,7 @@ body {
   padding: 2rem;
 }
 
+/* Background image disabled - using gradient instead
 .hero::before {
   content: '';
     position: absolute;
@@ -221,6 +222,7 @@ body {
   opacity: 0.1;
   z-index: 1;
 }
+*/
 
 .hero-content {
   display: grid;
