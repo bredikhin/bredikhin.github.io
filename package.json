@@ -1,0 +1,26 @@
+
+{
+  "name": "astro-site",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "astro build && gh-pages -d dist -b master",
+    "deploy:manual": "npm run build && gh-pages -d dist -b master"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "astro": "^5.13.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "sass": "^1.92.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

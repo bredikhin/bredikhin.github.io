@@ -1,0 +1,244 @@
+---
+import Layout from '../components/Layout.astro';
+import Client from '../components/Client.astro';
+
+const clients = [
+  {
+    name: 'Lookbooks',
+    img: 'client1.svg',
+    url: 'https://www.lookbooks.com/',
+  },
+  {
+    name: 'Ssense',
+    img: 'client2.svg',
+    url: 'https://www.ssense.com/',
+  },
+  {
+    name: 'Waggl',
+    img: 'client3.svg',
+    url: 'https://www.waggl.com/',
+  },
+  {
+    name: 'Clevertech',
+    img: 'client4.svg',
+    url: 'https://www.clevertech.biz/',
+  },
+  {
+    name: 'Automotive Data Solutions',
+    img: 'client5.svg',
+    url: 'https://www.adsdata.ca/',
+  },
+  {
+    name: 'Spiria',
+    img: 'client6.svg',
+    url: 'https://www.spiria.com/',
+  },
+  {
+    name: 'Estalio',
+    img: 'client7.svg',
+    url: 'http://www.estalio.com/',
+  },
+];
+
+const technologiesRaw = [
+  { name: 'React.js', since: 2016, category: 'Frontend' },
+  { name: 'TypeScript', since: 2018, category: 'Frontend' },
+  { name: 'Node.js', since: 2014, category: 'Backend' },
+  { name: 'Ruby on Rails', since: 2012, category: 'Backend' },
+  { name: 'PostgreSQL', since: 2012, category: 'Database' },
+  { name: 'MongoDB', since: 2014, category: 'Database' },
+  { name: 'Docker', since: 2018, category: 'DevOps' },
+  { name: 'AWS', since: 2018, category: 'DevOps' },
+  { name: 'Elixir', since: 2016, category: 'Backend' },
+  { name: 'Golang', since: 2020, category: 'Backend' },
+  { name: 'GraphQL', since: 2018, category: 'API' },
+  { name: 'Kubernetes', since: 2020, category: 'DevOps' }
+];
+
+const languages = [
+  { name: 'English', level: 'Native', flag: '🇺🇸' },
+  { name: 'French', level: 'Fluent', flag: '🇫🇷' },
+  { name: 'Spanish', level: 'Advanced', flag: '🇪🇸' },
+  { name: 'Portuguese', level: 'Intermediate', flag: '🇵🇹' },
+  { name: 'Italian', level: 'Intermediate', flag: '🇮🇹' },
+  { name: 'Russian', level: 'Native', flag: '🇷🇺' }
+];
+
+const currentYear = new Date().getFullYear();
+
+// Process technologies with experience calculation
+const technologies = technologiesRaw.map(tech => {
+  const years = currentYear - tech.since;
+  const experienceText = years <= 1 ? `~1 year` : `${years} years`;
+  return {
+    ...tech,
+    experienceText
+  };
+});
+---
+
+<Layout title="Ruslan Bredikhin" description="Senior software developer from Montreal, Canada">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="gradient-text">Ruslan Bredikhin</span>
+        </h1>
+        <h2 class="hero-subtitle">Senior Software Engineer</h2>
+        <p class="hero-description">
+          Crafting exceptional digital experiences with modern technologies. 
+          Over a decade of expertise in full-stack development, from concept to deployment.
+        </p>
+        <div class="hero-location">
+          <i class="fa fa-map-marker"></i>
+          Montreal, Canada
+        </div>
+        <div class="hero-cta">
+          <a href="#about" class="btn btn-primary">Learn More</a>
+          <a href="#projects" class="btn btn-secondary">View Projects</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-elements">
+          <div class="floating-icon react" title="React.js - Frontend Library">⚛️</div>
+          <div class="floating-icon node" title="Node.js - JavaScript Runtime">🟢</div>
+          <div class="floating-icon typescript" title="TypeScript - Typed JavaScript">🔷</div>
+          <div class="floating-icon docker" title="Docker - Containerization Platform">🐳</div>
+          <div class="floating-icon rails" title="Ruby on Rails - Web Framework">💎</div>
+          <div class="floating-icon postgres" title="PostgreSQL - Relational Database">🐘</div>
+          <div class="floating-icon mongodb" title="MongoDB - NoSQL Database">🍃</div>
+          <div class="floating-icon aws" title="Amazon Web Services - Cloud Platform">☁️</div>
+          <div class="floating-icon golang" title="Go - Programming Language">🐹</div>
+          <div class="floating-icon graphql" title="GraphQL - Query Language for APIs">🔗</div>
+          <div class="floating-icon kubernetes" title="Kubernetes - Container Orchestration">⚙️</div>
+          <div class="floating-icon elixir" title="Elixir - Functional Programming Language">🧪</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="main">
+    <!-- About Section -->
+    <section id="about" class="section-modern">
+      <header class="section-header">
+        <h2>About Me</h2>
+        <div class="section-divider"></div>
+      </header>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lead">
+            Senior software engineer with over a decade of experience and high
+            level of expertise in all aspects of Web-production including
+            development, testing, deployment and maintenance.
+          </p>
+          <p>
+            While holding a degree in informatics and mathematics, I admit that
+            most of my knowledge comes from real-world experience. I have
+            worked with diverse software stacks and Web technologies, from LAMP
+            (Linux, MySQL, Apache, PHP) and Ruby on Rails to MEAN (MongoDB,
+            Express.js, Angular.js, Node.js), Golang, Erlang and Elixir. 
+          </p>
+          <p class="highlight">
+            I believe that staying up-to-date with the latest trends is the only way 
+            to stay on top in such a rapidly changing industry as IT.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Languages</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="section-modern">
+      <header class="section-header">
+        <h2>Technologies & Skills</h2>
+        <div class="section-divider"></div>
+      </header>
+      <div class="tech-grid">
+        {technologies.map((tech) => (
+          <div class="tech-card">
+            <div class="tech-content">
+              <h3>{tech.name}</h3>
+              <span class="tech-category">{tech.category}</span>
+            </div>
+            <div class="tech-experience">{tech.experienceText}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-modern">
+      <header class="section-header">
+        <h2>Projects & Clients</h2>
+        <div class="section-divider"></div>
+      </header>
+      <div class="projects-grid">
+        {clients.map((client) => (
+          <div class="project-card">
+            <div class="project-logo">
+              <Client {...client} />
+            </div>
+            <div class="project-info">
+              <h3>{client.name}</h3>
+              <a href={client.url} target="_blank" rel="noreferrer noopener" class="project-link">
+                Visit Project <i class="fa fa-external-link"></i>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="section-modern">
+      <header class="section-header">
+        <h2>Languages</h2>
+        <div class="section-divider"></div>
+      </header>
+      <div class="languages-grid">
+        {languages.map(lang => (
+          <div class="language-item">
+            <span class="language-flag">{lang.flag}</span>
+            <div class="language-details">
+              <span class="language-name">{lang.name}</span>
+              <span class="language-level">{lang.level}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-modern">
+      <header class="section-header">
+        <h2>Education</h2>
+        <div class="section-divider"></div>
+      </header>
+      <div class="education-card">
+        <div class="education-icon">
+          <i class="fa fa-graduation-cap"></i>
+        </div>
+        <div class="education-content">
+          <h3>Master Degree (Hons)</h3>
+          <p class="education-school">Moscow Power Engineering University</p>
+          <p class="education-major">Applied Mathematics and Informatics</p>
+          <p class="education-date">July 2002, Russia</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
