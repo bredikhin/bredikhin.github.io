@@ -100,19 +100,77 @@ const technologies = technologiesRaw.map(tech => {
         </div>
       </div>
       <div class="hero-visual">
-        <div class="floating-elements">
-          <div class="floating-icon react" title="React.js - Frontend Library">⚛️</div>
-          <div class="floating-icon node" title="Node.js - JavaScript Runtime">🟢</div>
-          <div class="floating-icon typescript" title="TypeScript - Typed JavaScript">🔷</div>
-          <div class="floating-icon docker" title="Docker - Containerization Platform">🐳</div>
-          <div class="floating-icon rails" title="Ruby on Rails - Web Framework">💎</div>
-          <div class="floating-icon postgres" title="PostgreSQL - Relational Database">🐘</div>
-          <div class="floating-icon mongodb" title="MongoDB - NoSQL Database">🍃</div>
-          <div class="floating-icon aws" title="Amazon Web Services - Cloud Platform">☁️</div>
-          <div class="floating-icon golang" title="Go - Programming Language">🐹</div>
-          <div class="floating-icon graphql" title="GraphQL - Query Language for APIs">🔗</div>
-          <div class="floating-icon kubernetes" title="Kubernetes - Container Orchestration">⚙️</div>
-          <div class="floating-icon elixir" title="Elixir - Functional Programming Language">🧪</div>
+        <div class="code-blocks">
+          <div class="code-block react" data-delay="0s">
+            <div class="code-header">
+              <span class="code-lang">React</span>
+              <div class="code-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="code-content">
+              <span class="code-keyword">const</span> <span class="code-variable">App</span> = () => {`{`}<br/>
+              {'  '}<span class="code-keyword">return</span> <span class="code-string">&lt;Component /&gt;</span><br/>
+              {`}`}
+            </div>
+          </div>
+          
+          <div class="code-block node" data-delay="1s">
+            <div class="code-header">
+              <span class="code-lang">Node.js</span>
+              <div class="code-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="code-content">
+              <span class="code-variable">app</span>.<span class="code-method">listen</span>(<span class="code-number">3000</span>, () => {`{`}<br/>
+              {'  '}<span class="code-variable">console</span>.<span class="code-method">log</span>(<span class="code-string">'Server ready'</span>)<br/>
+              {`})`}
+            </div>
+          </div>
+          
+          <div class="code-block typescript" data-delay="2s">
+            <div class="code-header">
+              <span class="code-lang">TypeScript</span>
+              <div class="code-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="code-content">
+              <span class="code-keyword">interface</span> <span class="code-class">User</span> {`{`}<br/>
+              {'  '}<span class="code-property">id</span>: <span class="code-type">string</span><br/>
+              {'  '}<span class="code-property">name</span>: <span class="code-type">string</span><br/>
+              {`}`}
+            </div>
+          </div>
+          
+          <div class="code-block docker" data-delay="3s">
+            <div class="code-header">
+              <span class="code-lang">Docker</span>
+              <div class="code-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="code-content">
+              <span class="code-keyword">FROM</span> <span class="code-string">node:18-alpine</span><br/>
+              <span class="code-keyword">WORKDIR</span> <span class="code-string">/app</span><br/>
+              <span class="code-keyword">COPY</span> <span class="code-string">. .</span>
+            </div>
+          </div>
+          
+          <div class="code-block sql" data-delay="4s">
+            <div class="code-header">
+              <span class="code-lang">PostgreSQL</span>
+              <div class="code-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="code-content">
+              <span class="code-keyword">SELECT</span> * <span class="code-keyword">FROM</span> users<br/>
+              <span class="code-keyword">WHERE</span> active = <span class="code-boolean">true</span><br/>
+              <span class="code-keyword">ORDER BY</span> created_at
+            </div>
+          </div>
         </div>
       </div>
     </div>

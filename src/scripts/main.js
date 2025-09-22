@@ -152,18 +152,57 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 500);
     }
 
-    // Enhanced parallax effect to floating elements
-    const floatingElements = document.querySelectorAll('.floating-icon');
+    // Sophisticated parallax effect for code blocks
+    const codeBlocks = document.querySelectorAll('.code-block');
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.3;
+        const rate = scrolled * -0.2;
         
-        floatingElements.forEach((element, index) => {
-            const speed = (index + 1) * 0.08;
-            const rotation = scrolled * 0.05;
-            element.style.transform = `translateY(${rate * speed}px) rotate(${rotation}deg) scale(${1 + scrolled * 0.0001})`;
+        codeBlocks.forEach((element, index) => {
+            const speed = (index + 1) * 0.04;
+            const currentTransform = element.style.transform || '';
+            const baseTransform = element.classList.contains('sql') ? 'translateX(-50%)' : '';
+            element.style.transform = `${baseTransform} translateY(${rate * speed}px)`;
         });
     });
+
+    // Add typing animation to code blocks on scroll
+    const codeObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const codeContent = entry.target.querySelector('.code-content');
+                if (codeContent && !entry.target.hasAttribute('data-animated')) {
+                    entry.target.setAttribute('data-animated', 'true');
+                    animateCodeContent(codeContent);
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+
+    codeBlocks.forEach(block => {
+        codeObserver.observe(block);
+    });
+
+    // Animate code content with typing effect
+    function animateCodeContent(element) {
+        const originalHTML = element.innerHTML;
+        element.innerHTML = '';
+        
+        let index = 0;
+        const text = originalHTML.replace(/<[^>]*>/g, ''); // Strip HTML for typing
+        
+        const typeWriter = () => {
+            if (index < text.length) {
+                element.innerHTML = originalHTML.substring(0, index + 1);
+                index++;
+                setTimeout(typeWriter, 30);
+            } else {
+                element.innerHTML = originalHTML; // Restore full formatting
+            }
+        };
+        
+        setTimeout(typeWriter, 200);
+    }
 
     // Add modern card reveal animations
     const observeElements = document.querySelectorAll('.tech-card, .project-card, .language-item, .stat-item');
