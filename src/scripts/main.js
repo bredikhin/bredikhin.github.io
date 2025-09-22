@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         requestAnimationFrame(updateNumber);
     }
 
-    // Add scroll effect to header
+    // Enhanced scroll effect to header
     const header = document.querySelector('.modern-header');
     let lastScrollY = window.scrollY;
 
@@ -110,11 +110,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentScrollY = window.scrollY;
         
         if (currentScrollY > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-            header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-        } else {
             header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = 'none';
+            header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
+            header.style.borderBottom = '1px solid rgba(226, 232, 240, 0.8)';
+        } else {
+            header.style.background = 'rgba(255, 255, 255, 0.8)';
+            header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+            header.style.borderBottom = '1px solid rgba(226, 232, 240, 0.3)';
         }
         
         lastScrollY = currentScrollY;
@@ -150,15 +152,74 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 500);
     }
 
-    // Add parallax effect to floating elements
+    // Enhanced parallax effect to floating elements
     const floatingElements = document.querySelectorAll('.floating-icon');
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
+        const rate = scrolled * -0.3;
         
         floatingElements.forEach((element, index) => {
-            const speed = (index + 1) * 0.1;
-            element.style.transform = `translateY(${rate * speed}px) rotate(${scrolled * 0.1}deg)`;
+            const speed = (index + 1) * 0.08;
+            const rotation = scrolled * 0.05;
+            element.style.transform = `translateY(${rate * speed}px) rotate(${rotation}deg) scale(${1 + scrolled * 0.0001})`;
         });
+    });
+
+    // Add modern card reveal animations
+    const observeElements = document.querySelectorAll('.tech-card, .project-card, .language-item, .stat-item');
+    const cardObserverOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const cardObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, cardObserverOptions);
+
+    observeElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        cardObserver.observe(el);
+    });
+
+    // Add enhanced hover effects for tech cards
+    const techCards = document.querySelectorAll('.tech-card');
+    techCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+            this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // Add smooth reveal for section headers
+    const sectionHeaders = document.querySelectorAll('.section-header');
+    const headerObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const divider = entry.target.querySelector('.section-divider');
+                if (divider) {
+                    divider.style.width = '60px';
+                    divider.style.transition = 'width 0.8s ease 0.3s';
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sectionHeaders.forEach(header => {
+        const divider = header.querySelector('.section-divider');
+        if (divider) {
+            divider.style.width = '0px';
+        }
+        headerObserver.observe(header);
     });
 });
